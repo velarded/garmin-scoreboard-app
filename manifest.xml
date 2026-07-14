@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application id="a1b2c3d4-0000-0000-0000-000000000001" type="watch-app" name="@Strings.AppName" entry="VolleyballScoreApp" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="3.2.0">
+        <iq:permissions/>
+        <!-- Adjust/add product ids for the watch models you actually own -->
+        <iq:products>
+            <iq:product id="fenix7"/>
+            <iq:product id="fr165"/>
+            <iq:product id="fr255"/>
+            <iq:product id="venu2"/>
+            <iq:product id="vivoactive4"/>
+        </iq:products>
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+        <iq:barrels/>
+    </iq:application>
+</iq:manifest>

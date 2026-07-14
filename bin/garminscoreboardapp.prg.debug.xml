@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/velarded/Repositories/garmin-scoreboard-app/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="1" lineNum="99" parent="globals/SetupDelegate" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="2" lineNum="3" parent="globals/VolleyballScoreApp" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="3" lineNum="12" parent="globals/MatchView" pc="268435484" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/bin/gen/006-B4432-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435496" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="5" lineNum="198" parent="globals/QuitConfirmDelegate" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="6" lineNum="18" parent="globals/SetupView" pc="268435528" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="7" lineNum="79" parent="globals/HistoryDelegate" pc="268435540" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="8" lineNum="117" parent="globals/MatchDelegate" pc="268435552" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="9" lineNum="10" parent="globals/HistoryView" pc="268435564" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="168" parent="globals/SetupDelegate" pc="268435576" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="169" parent="globals/SetupDelegate" pc="268435578" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="170" parent="globals/SetupDelegate" pc="268435591" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="171" parent="globals/SetupDelegate" pc="268435603" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="172" parent="globals/SetupDelegate" pc="268435615" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="173" parent="globals/SetupDelegate" pc="268435626" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="10" lineNum="175" parent="globals/SetupDelegate" pc="268435631" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="122" parent="globals/SetupDelegate" pc="268435633" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="123" parent="globals/SetupDelegate" pc="268435635" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="124" parent="globals/SetupDelegate" pc="268435648" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="125" parent="globals/SetupDelegate" pc="268435663" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="126" parent="globals/SetupDelegate" pc="268435702" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="127" parent="globals/SetupDelegate" pc="268435718" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="130" parent="globals/SetupDelegate" pc="268435760" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="11" lineNum="132" parent="globals/SetupDelegate" pc="268435790" symbol="handleUpDown"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="12" lineNum="103" parent="globals/SetupDelegate" pc="268435802" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="12" lineNum="104" parent="globals/SetupDelegate" pc="268435804" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="12" lineNum="105" parent="globals/SetupDelegate" pc="268435816" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="13" lineNum="135" parent="globals/SetupDelegate" pc="268435826" symbol="clamp"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="13" lineNum="136" parent="globals/SetupDelegate" pc="268435828" symbol="clamp"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="13" lineNum="137" parent="globals/SetupDelegate" pc="268435836" symbol="clamp"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="13" lineNum="139" parent="globals/SetupDelegate" pc="268435842" symbol="clamp"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="13" lineNum="140" parent="globals/SetupDelegate" pc="268435850" symbol="clamp"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="13" lineNum="142" parent="globals/SetupDelegate" pc="268435856" symbol="clamp"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="108" parent="globals/SetupDelegate" pc="268435859" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="109" parent="globals/SetupDelegate" pc="268435862" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="110" parent="globals/SetupDelegate" pc="268435871" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="111" parent="globals/SetupDelegate" pc="268435879" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="112" parent="globals/SetupDelegate" pc="268435890" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="113" parent="globals/SetupDelegate" pc="268435895" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="114" parent="globals/SetupDelegate" pc="268435903" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="115" parent="globals/SetupDelegate" pc="268435914" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="116" parent="globals/SetupDelegate" pc="268435919" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="117" parent="globals/SetupDelegate" pc="268435927" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="14" lineNum="119" parent="globals/SetupDelegate" pc="268435937" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="145" parent="globals/SetupDelegate" pc="268435939" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="146" parent="globals/SetupDelegate" pc="268435942" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="147" parent="globals/SetupDelegate" pc="268435954" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="148" parent="globals/SetupDelegate" pc="268435969" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="149" parent="globals/SetupDelegate" pc="268435991" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="150" parent="globals/SetupDelegate" pc="268436005" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="152" parent="globals/SetupDelegate" pc="268436023" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="153" parent="globals/SetupDelegate" pc="268436031" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="154" parent="globals/SetupDelegate" pc="268436053" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="155" parent="globals/SetupDelegate" pc="268436068" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="156" parent="globals/SetupDelegate" pc="268436076" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="157" parent="globals/SetupDelegate" pc="268436088" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="158" parent="globals/SetupDelegate" pc="268436138" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="159" parent="globals/SetupDelegate" pc="268436160" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="160" parent="globals/SetupDelegate" pc="268436202" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="161" parent="globals/SetupDelegate" pc="268436210" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="162" parent="globals/SetupDelegate" pc="268436230" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="164" parent="globals/SetupDelegate" pc="268436270" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="15" lineNum="165" parent="globals/SetupDelegate" pc="268436281" symbol="onSelect"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="16" lineNum="9" parent="globals/VolleyballScoreApp" pc="268436283" symbol="onStart"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="17" lineNum="15" parent="globals/VolleyballScoreApp" pc="268436286" symbol="getInitialView"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="17" lineNum="16" parent="globals/VolleyballScoreApp" pc="268436289" symbol="getInitialView"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="17" lineNum="17" parent="globals/VolleyballScoreApp" pc="268436309" symbol="getInitialView"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="18" lineNum="5" parent="globals/VolleyballScoreApp" pc="268436342" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="18" lineNum="6" parent="globals/VolleyballScoreApp" pc="268436344" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/VolleyballScoreApp.mc" id="19" lineNum="12" parent="globals/VolleyballScoreApp" pc="268436357" symbol="onStop"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="83" parent="globals/MatchView" pc="268436360" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="84" parent="globals/MatchView" pc="268436363" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="85" parent="globals/MatchView" pc="268436379" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="87" parent="globals/MatchView" pc="268436396" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="88" parent="globals/MatchView" pc="268436412" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="91" parent="globals/MatchView" pc="268436444" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="93" parent="globals/MatchView" pc="268436461" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="94" parent="globals/MatchView" pc="268436469" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="95" parent="globals/MatchView" pc="268436491" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="96" parent="globals/MatchView" pc="268436499" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="98" parent="globals/MatchView" pc="268436521" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="100" parent="globals/MatchView" pc="268436540" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="103" parent="globals/MatchView" pc="268436569" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="104" parent="globals/MatchView" pc="268436579" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="105" parent="globals/MatchView" pc="268436604" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="108" parent="globals/MatchView" pc="268436681" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="111" parent="globals/MatchView" pc="268436704" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="20" lineNum="112" parent="globals/MatchView" pc="268436721" symbol="drawSummary"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="35" parent="globals/MatchView" pc="268436753" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="36" parent="globals/MatchView" pc="268436756" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="38" parent="globals/MatchView" pc="268436779" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="39" parent="globals/MatchView" pc="268436796" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="44" parent="globals/MatchView" pc="268436859" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="45" parent="globals/MatchView" pc="268436874" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="46" parent="globals/MatchView" pc="268436881" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="47" parent="globals/MatchView" pc="268436900" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="48" parent="globals/MatchView" pc="268436907" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="50" parent="globals/MatchView" pc="268436920" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="52" parent="globals/MatchView" pc="268436973" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="57" parent="globals/MatchView" pc="268437004" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="58" parent="globals/MatchView" pc="268437020" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="60" parent="globals/MatchView" pc="268437055" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="61" parent="globals/MatchView" pc="268437072" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="65" parent="globals/MatchView" pc="268437107" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="66" parent="globals/MatchView" pc="268437124" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="68" parent="globals/MatchView" pc="268437164" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="70" parent="globals/MatchView" pc="268437196" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="74" parent="globals/MatchView" pc="268437237" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="75" parent="globals/MatchView" pc="268437254" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="21" lineNum="79" parent="globals/MatchView" pc="268437322" symbol="drawScoreboard"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="22" lineNum="16" parent="globals/MatchView" pc="268437354" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="22" lineNum="17" parent="globals/MatchView" pc="268437356" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="22" lineNum="18" parent="globals/MatchView" pc="268437368" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="21" parent="globals/MatchView" pc="268437378" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="22" parent="globals/MatchView" pc="268437381" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="23" parent="globals/MatchView" pc="268437390" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="25" parent="globals/MatchView" pc="268437399" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="26" parent="globals/MatchView" pc="268437411" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="28" parent="globals/MatchView" pc="268437419" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="29" parent="globals/MatchView" pc="268437432" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="23" lineNum="31" parent="globals/MatchView" pc="268437450" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="24" lineNum="204" parent="globals/QuitConfirmDelegate" pc="268437466" symbol="onResponse"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="24" lineNum="205" parent="globals/QuitConfirmDelegate" pc="268437468" symbol="onResponse"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="24" lineNum="207" parent="globals/QuitConfirmDelegate" pc="268437476" symbol="onResponse"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="24" lineNum="209" parent="globals/QuitConfirmDelegate" pc="268437494" symbol="onResponse"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="25" lineNum="200" parent="globals/QuitConfirmDelegate" pc="268437496" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="25" lineNum="201" parent="globals/QuitConfirmDelegate" pc="268437498" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="119" parent="globals/Match" pc="268437511" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="120" parent="globals/Match" pc="268437514" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="121" parent="globals/Match" pc="268437533" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="122" parent="globals/Match" pc="268437537" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="123" parent="globals/Match" pc="268437552" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="125" parent="globals/Match" pc="268437559" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="130" parent="globals/Match" pc="268437610" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="131" parent="globals/Match" pc="268437621" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="132" parent="globals/Match" pc="268437648" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="133" parent="globals/Match" pc="268437659" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="26" lineNum="135" parent="globals/Match" pc="268437685" symbol="saveToHistory"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="29" parent="globals/Match" pc="268437706" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="30" parent="globals/Match" pc="268437709" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="31" parent="globals/Match" pc="268437717" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="33" parent="globals/Match" pc="268437721" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="34" parent="globals/Match" pc="268437734" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="35" parent="globals/Match" pc="268437747" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="36" parent="globals/Match" pc="268437759" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="37" parent="globals/Match" pc="268437802" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="27" lineNum="38" parent="globals/Match" pc="268437807" symbol="addPoint"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="28" lineNum="63" parent="globals/Match" pc="268437818" symbol="advance"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="28" lineNum="64" parent="globals/Match" pc="268437820" symbol="advance"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="28" lineNum="65" parent="globals/Match" pc="268437837" symbol="advance"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="28" lineNum="67" parent="globals/Match" pc="268437848" symbol="advance"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="28" lineNum="68" parent="globals/Match" pc="268437863" symbol="advance"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="73" parent="globals/Match" pc="268437889" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="74" parent="globals/Match" pc="268437892" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="75" parent="globals/Match" pc="268437908" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="77" parent="globals/Match" pc="268437913" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="78" parent="globals/Match" pc="268437935" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="80" parent="globals/Match" pc="268437955" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="81" parent="globals/Match" pc="268437994" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="82" parent="globals/Match" pc="268437999" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="83" parent="globals/Match" pc="268438007" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="85" parent="globals/Match" pc="268438018" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="86" parent="globals/Match" pc="268438038" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="89" parent="globals/Match" pc="268438056" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="90" parent="globals/Match" pc="268438080" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="91" parent="globals/Match" pc="268438093" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="29" lineNum="93" parent="globals/Match" pc="268438121" symbol="undo"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="30" lineNum="96" parent="globals/Match" pc="268438123" symbol="popLast"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="30" lineNum="97" parent="globals/Match" pc="268438126" symbol="popLast"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="30" lineNum="98" parent="globals/Match" pc="268438138" symbol="popLast"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="30" lineNum="99" parent="globals/Match" pc="268438143" symbol="popLast"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="30" lineNum="100" parent="globals/Match" pc="268438154" symbol="popLast"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="30" lineNum="102" parent="globals/Match" pc="268438174" symbol="popLast"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="31" lineNum="55" parent="globals/Match" pc="268438177" symbol="endSetManual"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="31" lineNum="56" parent="globals/Match" pc="268438179" symbol="endSetManual"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="31" lineNum="57" parent="globals/Match" pc="268438187" symbol="endSetManual"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="31" lineNum="59" parent="globals/Match" pc="268438191" symbol="endSetManual"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="31" lineNum="60" parent="globals/Match" pc="268438216" symbol="endSetManual"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="32" lineNum="21" parent="globals/Match" pc="268438224" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="32" lineNum="22" parent="globals/Match" pc="268438226" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="32" lineNum="23" parent="globals/Match" pc="268438235" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="32" lineNum="24" parent="globals/Match" pc="268438244" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="32" lineNum="25" parent="globals/Match" pc="268438253" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="32" lineNum="26" parent="globals/Match" pc="268438272" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="106" parent="globals/Match" pc="268438282" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="107" parent="globals/Match" pc="268438285" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="108" parent="globals/Match" pc="268438292" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="109" parent="globals/Match" pc="268438295" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="110" parent="globals/Match" pc="268438324" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="111" parent="globals/Match" pc="268438335" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="112" parent="globals/Match" pc="268438361" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="33" lineNum="115" parent="globals/Match" pc="268438381" symbol="setsWon"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="42" parent="globals/Match" pc="268438384" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="43" parent="globals/Match" pc="268438387" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="44" parent="globals/Match" pc="268438414" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="45" parent="globals/Match" pc="268438426" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="46" parent="globals/Match" pc="268438433" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="48" parent="globals/Match" pc="268438442" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="49" parent="globals/Match" pc="268438450" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchModel.mc" id="34" lineNum="51" parent="globals/Match" pc="268438473" symbol="isSetComplete"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="27" parent="globals/SetupView" pc="268438482" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="28" parent="globals/SetupView" pc="268438485" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="29" parent="globals/SetupView" pc="268438497" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="30" parent="globals/SetupView" pc="268438516" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="31" parent="globals/SetupView" pc="268438531" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="32" parent="globals/SetupView" pc="268438535" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="33" parent="globals/SetupView" pc="268438553" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="35" parent="globals/SetupView" pc="268438577" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="36" parent="globals/SetupView" pc="268438595" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="38" parent="globals/SetupView" pc="268438619" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="35" lineNum="39" parent="globals/SetupView" pc="268438637" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="36" lineNum="44" parent="globals/SetupView" pc="268438665" symbol="saveSettings"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="36" lineNum="45" parent="globals/SetupView" pc="268438667" symbol="saveSettings"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="52" parent="globals/SetupView" pc="268438724" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="53" parent="globals/SetupView" pc="268438727" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="54" parent="globals/SetupView" pc="268438736" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="56" parent="globals/SetupView" pc="268438745" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="57" parent="globals/SetupView" pc="268438757" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="59" parent="globals/SetupView" pc="268438765" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="60" parent="globals/SetupView" pc="268438782" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="63" parent="globals/SetupView" pc="268438814" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="64" parent="globals/SetupView" pc="268438821" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="72" parent="globals/SetupView" pc="268438881" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="73" parent="globals/SetupView" pc="268438891" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="75" parent="globals/SetupView" pc="268438901" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="76" parent="globals/SetupView" pc="268438912" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="78" parent="globals/SetupView" pc="268438922" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="79" parent="globals/SetupView" pc="268438933" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="81" parent="globals/SetupView" pc="268438963" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="84" parent="globals/SetupView" pc="268439001" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="85" parent="globals/SetupView" pc="268439018" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="86" parent="globals/SetupView" pc="268439039" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="89" parent="globals/SetupView" pc="268439074" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="91" parent="globals/SetupView" pc="268439109" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/SetupView.mc" id="37" lineNum="92" parent="globals/SetupView" pc="268439155" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="38" lineNum="83" parent="globals/HistoryDelegate" pc="268439198" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="38" lineNum="84" parent="globals/HistoryDelegate" pc="268439200" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="38" lineNum="85" parent="globals/HistoryDelegate" pc="268439212" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="88" parent="globals/HistoryDelegate" pc="268439222" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="89" parent="globals/HistoryDelegate" pc="268439225" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="90" parent="globals/HistoryDelegate" pc="268439234" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="91" parent="globals/HistoryDelegate" pc="268439252" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="92" parent="globals/HistoryDelegate" pc="268439259" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="93" parent="globals/HistoryDelegate" pc="268439267" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="94" parent="globals/HistoryDelegate" pc="268439297" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="95" parent="globals/HistoryDelegate" pc="268439308" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="96" parent="globals/HistoryDelegate" pc="268439313" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="97" parent="globals/HistoryDelegate" pc="268439321" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="98" parent="globals/HistoryDelegate" pc="268439348" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="99" parent="globals/HistoryDelegate" pc="268439359" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="39" lineNum="102" parent="globals/HistoryDelegate" pc="268439367" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="40" lineNum="183" parent="globals/MatchDelegate" pc="268439369" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="40" lineNum="184" parent="globals/MatchDelegate" pc="268439371" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="40" lineNum="185" parent="globals/MatchDelegate" pc="268439394" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="40" lineNum="186" parent="globals/MatchDelegate" pc="268439406" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="40" lineNum="188" parent="globals/MatchDelegate" pc="268439420" symbol="onBack"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="41" lineNum="191" parent="globals/MatchDelegate" pc="268439422" symbol="onMenu"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="41" lineNum="192" parent="globals/MatchDelegate" pc="268439425" symbol="onMenu"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="41" lineNum="193" parent="globals/MatchDelegate" pc="268439454" symbol="onMenu"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="41" lineNum="194" parent="globals/MatchDelegate" pc="268439489" symbol="onMenu"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="163" parent="globals/MatchDelegate" pc="268439491" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="164" parent="globals/MatchDelegate" pc="268439494" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="165" parent="globals/MatchDelegate" pc="268439507" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="167" parent="globals/MatchDelegate" pc="268439541" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="168" parent="globals/MatchDelegate" pc="268439549" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="169" parent="globals/MatchDelegate" pc="268439566" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="170" parent="globals/MatchDelegate" pc="268439571" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="172" parent="globals/MatchDelegate" pc="268439586" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="174" parent="globals/MatchDelegate" pc="268439598" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="175" parent="globals/MatchDelegate" pc="268439609" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="42" lineNum="177" parent="globals/MatchDelegate" pc="268439614" symbol="onKeyReleased"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="43" lineNum="126" parent="globals/MatchDelegate" pc="268439616" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="43" lineNum="127" parent="globals/MatchDelegate" pc="268439618" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="43" lineNum="128" parent="globals/MatchDelegate" pc="268439630" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="43" lineNum="129" parent="globals/MatchDelegate" pc="268439639" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="132" parent="globals/MatchDelegate" pc="268439649" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="133" parent="globals/MatchDelegate" pc="268439652" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="134" parent="globals/MatchDelegate" pc="268439661" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="135" parent="globals/MatchDelegate" pc="268439669" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="136" parent="globals/MatchDelegate" pc="268439684" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="137" parent="globals/MatchDelegate" pc="268439695" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="138" parent="globals/MatchDelegate" pc="268439700" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="139" parent="globals/MatchDelegate" pc="268439708" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="140" parent="globals/MatchDelegate" pc="268439724" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="141" parent="globals/MatchDelegate" pc="268439735" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="142" parent="globals/MatchDelegate" pc="268439740" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="143" parent="globals/MatchDelegate" pc="268439748" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="144" parent="globals/MatchDelegate" pc="268439761" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="145" parent="globals/MatchDelegate" pc="268439773" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="147" parent="globals/MatchDelegate" pc="268439791" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="148" parent="globals/MatchDelegate" pc="268439796" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="149" parent="globals/MatchDelegate" pc="268439804" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="44" lineNum="151" parent="globals/MatchDelegate" pc="268439809" symbol="onKey"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="45" lineNum="155" parent="globals/MatchDelegate" pc="268439811" symbol="onKeyPressed"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="45" lineNum="156" parent="globals/MatchDelegate" pc="268439813" symbol="onKeyPressed"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="45" lineNum="157" parent="globals/MatchDelegate" pc="268439826" symbol="onKeyPressed"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="45" lineNum="158" parent="globals/MatchDelegate" pc="268439843" symbol="onKeyPressed"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/MatchView.mc" id="45" lineNum="160" parent="globals/MatchDelegate" pc="268439848" symbol="onKeyPressed"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="46" lineNum="70" parent="globals/HistoryView" pc="268439850" symbol="formatDate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="46" lineNum="71" parent="globals/HistoryView" pc="268439853" symbol="formatDate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="46" lineNum="72" parent="globals/HistoryView" pc="268439859" symbol="formatDate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="46" lineNum="74" parent="globals/HistoryView" pc="268439868" symbol="formatDate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="46" lineNum="75" parent="globals/HistoryView" pc="268439908" symbol="formatDate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="47" lineNum="15" parent="globals/HistoryView" pc="268439980" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="47" lineNum="16" parent="globals/HistoryView" pc="268439983" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="47" lineNum="17" parent="globals/HistoryView" pc="268439995" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="47" lineNum="18" parent="globals/HistoryView" pc="268440014" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="47" lineNum="19" parent="globals/HistoryView" pc="268440029" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="47" lineNum="21" parent="globals/HistoryView" pc="268440041" symbol="initialize"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="25" parent="globals/HistoryView" pc="268440051" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="26" parent="globals/HistoryView" pc="268440054" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="27" parent="globals/HistoryView" pc="268440063" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="29" parent="globals/HistoryView" pc="268440072" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="30" parent="globals/HistoryView" pc="268440084" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="32" parent="globals/HistoryView" pc="268440092" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="33" parent="globals/HistoryView" pc="268440109" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="36" parent="globals/HistoryView" pc="268440141" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="37" parent="globals/HistoryView" pc="268440157" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="38" parent="globals/HistoryView" pc="268440174" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="40" parent="globals/HistoryView" pc="268440203" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="43" parent="globals/HistoryView" pc="268440207" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="45" parent="globals/HistoryView" pc="268440220" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="49" parent="globals/HistoryView" pc="268440272" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="50" parent="globals/HistoryView" pc="268440289" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="53" parent="globals/HistoryView" pc="268440338" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="54" parent="globals/HistoryView" pc="268440354" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="55" parent="globals/HistoryView" pc="268440364" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="56" parent="globals/HistoryView" pc="268440380" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="57" parent="globals/HistoryView" pc="268440387" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="60" parent="globals/HistoryView" pc="268440442" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="63" parent="globals/HistoryView" pc="268440465" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="64" parent="globals/HistoryView" pc="268440482" symbol="onUpdate"/>
+        <entry filename="/Users/velarded/Repositories/garmin-scoreboard-app/source/HistoryView.mc" id="48" lineNum="65" parent="globals/HistoryView" pc="268440499" symbol="onUpdate"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="5" object="true" symbol="HistoryDelegate"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="20" method="true" symbol="advance"/>
+        <entry id="39" method="true" symbol="formatDate"/>
+        <entry id="11" object="true" symbol="SetupDelegate"/>
+        <entry field="true" id="22" symbol="done"/>
+        <entry id="14" method="true" symbol="clamp"/>
+        <entry id="25" method="true" symbol="isSetComplete"/>
+        <entry id="8392384" method="true" symbol="addPoint"/>
+        <entry id="35" method="true" symbol="saveSettings"/>
+        <entry field="true" id="19" symbol="match"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8389108" method="true" symbol="onResponse"/>
+        <entry id="23" method="true" symbol="endSetManual"/>
+        <entry id="8389554" method="true" symbol="onKeyReleased"/>
+        <entry field="true" id="26" symbol="numSets"/>
+        <entry id="28" method="true" symbol="saveToHistory"/>
+        <entry id="18" method="true" symbol="drawSummary"/>
+        <entry field="true" id="40" symbol="history"/>
+        <entry field="true" id="43" symbol="AppName"/>
+        <entry field="true" id="24" symbol="events"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="9" object="true" symbol="MatchView"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389553" method="true" symbol="onKeyPressed"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="38" symbol="backHandledAt"/>
+        <entry id="6" object="true" symbol="HistoryView"/>
+        <entry id="30" method="true" symbol="setsWon"/>
+        <entry field="true" id="36" symbol="sel"/>
+        <entry id="13" object="true" symbol="VolleyballScoreApp"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="27" method="true" symbol="popLast"/>
+        <entry id="17" method="true" symbol="drawScoreboard"/>
+        <entry field="true" id="34" symbol="editing"/>
+        <entry field="true" id="37" symbol="backDownAt"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="42" symbol="LauncherIcon"/>
+        <entry field="true" id="31" symbol="target"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="12" object="true" symbol="SetupView"/>
+        <entry id="8" object="true" symbol="MatchDelegate"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="33" symbol="winBy2"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="16" symbol="view"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389097" method="true" symbol="onKey"/>
+        <entry id="32" method="true" symbol="undo"/>
+        <entry field="true" id="29" symbol="sets"/>
+        <entry field="true" id="21" symbol="cur"/>
+        <entry id="10" object="true" symbol="QuitConfirmDelegate"/>
+        <entry id="15" method="true" symbol="handleUpDown"/>
+        <entry id="7" object="true" symbol="Match"/>
+        <entry field="true" id="41" symbol="index"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435801" name="dir" stackId="1" startPc="268435633"/>
+        <entry arg="true" endPc="268435825" name="view" stackId="1" startPc="268435802"/>
+        <entry arg="true" endPc="268435858" name="v" stackId="1" startPc="268435826"/>
+        <entry arg="true" endPc="268435858" name="lo" stackId="2" startPc="268435826"/>
+        <entry arg="true" endPc="268435858" name="hi" stackId="3" startPc="268435826"/>
+        <entry arg="true" endPc="268435938" name="keyEvent" stackId="1" startPc="268435859"/>
+        <entry endPc="268435938" name="key" stackId="2" startPc="268435862"/>
+        <entry endPc="268436282" name="sel" stackId="1" startPc="268435942"/>
+        <entry endPc="268436198" name="match" stackId="2" startPc="268436076"/>
+        <entry endPc="268436198" name="mv" stackId="3" startPc="268436076"/>
+        <entry endPc="268436266" name="hv" stackId="4" startPc="268436210"/>
+        <entry endPc="268436341" name="view" stackId="1" startPc="268436289"/>
+        <entry arg="true" endPc="268436752" name="dc" stackId="1" startPc="268436360"/>
+        <entry arg="true" endPc="268436752" name="w" stackId="2" startPc="268436360"/>
+        <entry arg="true" endPc="268436752" name="h" stackId="3" startPc="268436360"/>
+        <entry endPc="268436751" name="aWon" stackId="4" startPc="268436363"/>
+        <entry endPc="268436751" name="bWon" stackId="5" startPc="268436363"/>
+        <entry endPc="268436751" name="result" stackId="6" startPc="268436363"/>
+        <entry endPc="268436751" name="y" stackId="7" startPc="268436363"/>
+        <entry endPc="268436703" name="i" stackId="8" startPc="268436604"/>
+        <entry arg="true" endPc="268437353" name="dc" stackId="1" startPc="268436753"/>
+        <entry arg="true" endPc="268437353" name="w" stackId="2" startPc="268436753"/>
+        <entry arg="true" endPc="268437353" name="h" stackId="3" startPc="268436753"/>
+        <entry endPc="268437352" name="s" stackId="4" startPc="268436756"/>
+        <entry endPc="268437000" name="prev" stackId="5" startPc="268436874"/>
+        <entry endPc="268436972" name="i" stackId="6" startPc="268436900"/>
+        <entry arg="true" endPc="268437377" name="match" stackId="1" startPc="268437354"/>
+        <entry arg="true" endPc="268437465" name="dc" stackId="1" startPc="268437378"/>
+        <entry endPc="268437464" name="w" stackId="2" startPc="268437381"/>
+        <entry endPc="268437464" name="h" stackId="3" startPc="268437381"/>
+        <entry arg="true" endPc="268437495" name="response" stackId="1" startPc="268437466"/>
+        <entry endPc="268437704" name="stored" stackId="1" startPc="268437514"/>
+        <entry endPc="268437704" name="history" stackId="2" startPc="268437514"/>
+        <entry endPc="268437704" name="entry" stackId="3" startPc="268437514"/>
+        <entry endPc="268437704" name="capped" stackId="4" startPc="268437514"/>
+        <entry endPc="268437704" name="max" stackId="5" startPc="268437514"/>
+        <entry endPc="268437684" name="i" stackId="6" startPc="268437659"/>
+        <entry arg="true" endPc="268437817" name="team" stackId="1" startPc="268437706"/>
+        <entry endPc="268437816" name="s" stackId="2" startPc="268437709"/>
+        <entry endPc="268437816" name="auto" stackId="3" startPc="268437709"/>
+        <entry endPc="268438122" name="e" stackId="1" startPc="268437892"/>
+        <entry endPc="268438122" name="reopens" stackId="2" startPc="268437892"/>
+        <entry endPc="268438117" name="s" stackId="3" startPc="268438080"/>
+        <entry arg="true" endPc="268438176" name="arr" stackId="1" startPc="268438123"/>
+        <entry endPc="268438176" name="n" stackId="2" startPc="268438126"/>
+        <entry endPc="268438176" name="out" stackId="3" startPc="268438126"/>
+        <entry endPc="268438173" name="i" stackId="4" startPc="268438154"/>
+        <entry arg="true" endPc="268438281" name="n" stackId="1" startPc="268438224"/>
+        <entry arg="true" endPc="268438281" name="t" stackId="2" startPc="268438224"/>
+        <entry arg="true" endPc="268438281" name="w" stackId="3" startPc="268438224"/>
+        <entry arg="true" endPc="268438383" name="team" stackId="1" startPc="268438282"/>
+        <entry endPc="268438383" name="other" stackId="2" startPc="268438285"/>
+        <entry endPc="268438383" name="count" stackId="3" startPc="268438285"/>
+        <entry endPc="268438383" name="completed" stackId="4" startPc="268438285"/>
+        <entry endPc="268438380" name="i" stackId="5" startPc="268438335"/>
+        <entry arg="true" endPc="268438481" name="s" stackId="1" startPc="268438384"/>
+        <entry endPc="268438481" name="hi" stackId="2" startPc="268438387"/>
+        <entry endPc="268438481" name="lead" stackId="3" startPc="268438387"/>
+        <entry endPc="268438663" name="stored" stackId="1" startPc="268438485"/>
+        <entry endPc="268438660" name="d" stackId="2" startPc="268438531"/>
+        <entry arg="true" endPc="268439197" name="dc" stackId="1" startPc="268438724"/>
+        <entry endPc="268439196" name="w" stackId="2" startPc="268438727"/>
+        <entry endPc="268439196" name="h" stackId="3" startPc="268438727"/>
+        <entry endPc="268439196" name="labels" stackId="4" startPc="268438727"/>
+        <entry endPc="268439196" name="values" stackId="5" startPc="268438727"/>
+        <entry endPc="268439196" name="rowH" stackId="6" startPc="268438727"/>
+        <entry endPc="268439196" name="startY" stackId="7" startPc="268438727"/>
+        <entry endPc="268439196" name="i" stackId="8" startPc="268438912"/>
+        <entry endPc="268439186" name="y" stackId="9" startPc="268438912"/>
+        <entry endPc="268439186" name="v" stackId="10" startPc="268439074"/>
+        <entry arg="true" endPc="268439221" name="view" stackId="1" startPc="268439198"/>
+        <entry arg="true" endPc="268439368" name="keyEvent" stackId="1" startPc="268439222"/>
+        <entry endPc="268439368" name="key" stackId="2" startPc="268439225"/>
+        <entry endPc="268439368" name="n" stackId="3" startPc="268439225"/>
+        <entry endPc="268439490" name="dialog" stackId="1" startPc="268439425"/>
+        <entry arg="true" endPc="268439615" name="keyEvent" stackId="1" startPc="268439491"/>
+        <entry endPc="268439610" name="longPress" stackId="2" startPc="268439507"/>
+        <entry arg="true" endPc="268439648" name="match" stackId="1" startPc="268439616"/>
+        <entry arg="true" endPc="268439648" name="view" stackId="2" startPc="268439616"/>
+        <entry arg="true" endPc="268439810" name="keyEvent" stackId="1" startPc="268439649"/>
+        <entry endPc="268439810" name="key" stackId="2" startPc="268439652"/>
+        <entry arg="true" endPc="268439849" name="keyEvent" stackId="1" startPc="268439811"/>
+        <entry arg="true" endPc="268439979" name="ts" stackId="1" startPc="268439850"/>
+        <entry endPc="268439979" name="info" stackId="2" startPc="268439853"/>
+        <entry endPc="268440049" name="stored" stackId="1" startPc="268439983"/>
+        <entry arg="true" endPc="268440533" name="dc" stackId="1" startPc="268440051"/>
+        <entry endPc="268440532" name="w" stackId="2" startPc="268440054"/>
+        <entry endPc="268440532" name="h" stackId="3" startPc="268440054"/>
+        <entry endPc="268440532" name="entry" stackId="4" startPc="268440054"/>
+        <entry endPc="268440532" name="scores" stackId="5" startPc="268440054"/>
+        <entry endPc="268440532" name="y" stackId="6" startPc="268440054"/>
+        <entry endPc="268440464" name="i" stackId="7" startPc="268440380"/>
+        <entry endPc="268440454" name="sc" stackId="8" startPc="268440380"/>
+    </localVars>
+    <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B4432-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="49" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/SetupDelegate" offset="170" parentId="globals" symbolId="SetupDelegate" type="class"/>
+        <dataEntry label="globals/VolleyballScoreApp" offset="268" parentId="globals" symbolId="VolleyballScoreApp" type="class"/>
+        <dataEntry label="globals/MatchView" offset="339" parentId="globals" symbolId="MatchView" type="class"/>
+        <dataEntry label="globals/Rez" offset="419" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/QuitConfirmDelegate" offset="463" parentId="globals" symbolId="QuitConfirmDelegate" type="class"/>
+        <dataEntry label="globals/Match" offset="516" parentId="globals" symbolId="Match" type="class"/>
+        <dataEntry label="globals/SetupView" offset="695" parentId="globals" symbolId="SetupView" type="class"/>
+        <dataEntry label="globals/HistoryDelegate" offset="802" parentId="globals" symbolId="HistoryDelegate" type="class"/>
+        <dataEntry label="globals/MatchDelegate" offset="864" parentId="globals" symbolId="MatchDelegate" type="class"/>
+        <dataEntry label="globals/HistoryView" offset="989" parentId="globals" symbolId="HistoryView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1069" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1104" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="SetupDelegate" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="VolleyballScoreApp" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435495" name="&lt;init&gt;" parent="MatchView" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="Rez" startPc="268435496">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="QuitConfirmDelegate" startPc="268435516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Match">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435539" name="&lt;init&gt;" parent="SetupView" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435551" name="&lt;init&gt;" parent="HistoryDelegate" startPc="268435540">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435563" name="&lt;init&gt;" parent="MatchDelegate" startPc="268435552">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435575" name="&lt;init&gt;" parent="HistoryView" startPc="268435564">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435632" name="onBack" parent="SetupDelegate" startPc="268435576">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435801" name="handleUpDown" parent="SetupDelegate" startPc="268435633">
+            <param id="dir"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435825" name="initialize" parent="SetupDelegate" startPc="268435802">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435858" name="clamp" parent="SetupDelegate" startPc="268435826">
+            <param id="v"/>
+            <param id="lo"/>
+            <param id="hi"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435938" name="onKey" parent="SetupDelegate" startPc="268435859">
+            <param id="keyEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436282" name="onSelect" parent="SetupDelegate" startPc="268435939">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436285" name="onStart" parent="VolleyballScoreApp" startPc="268436283">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436341" name="getInitialView" parent="VolleyballScoreApp" startPc="268436286">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436356" name="initialize" parent="VolleyballScoreApp" startPc="268436342">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436359" name="onStop" parent="VolleyballScoreApp" startPc="268436357">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436752" name="drawSummary" parent="MatchView" startPc="268436360">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437353" name="drawScoreboard" parent="MatchView" startPc="268436753">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437377" name="initialize" parent="MatchView" startPc="268437354">
+            <param id="match"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437465" name="onUpdate" parent="MatchView" startPc="268437378">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437495" name="onResponse" parent="QuitConfirmDelegate" startPc="268437466">
+            <param id="response"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437510" name="initialize" parent="QuitConfirmDelegate" startPc="268437496">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437705" name="saveToHistory" parent="Match" startPc="268437511">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437817" name="addPoint" parent="Match" startPc="268437706">
+            <param id="team"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437888" name="advance" parent="Match" startPc="268437818">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438122" name="undo" parent="Match" startPc="268437889">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438176" name="popLast" parent="Match" startPc="268438123">
+            <param id="arr"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438223" name="endSetManual" parent="Match" startPc="268438177">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438281" name="initialize" parent="Match" startPc="268438224">
+            <param id="n"/>
+            <param id="t"/>
+            <param id="w"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438383" name="setsWon" parent="Match" startPc="268438282">
+            <param id="team"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438481" name="isSetComplete" parent="Match" startPc="268438384">
+            <param id="s"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438664" name="initialize" parent="SetupView" startPc="268438482">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438723" name="saveSettings" parent="SetupView" startPc="268438665">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439197" name="onUpdate" parent="SetupView" startPc="268438724">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439221" name="initialize" parent="HistoryDelegate" startPc="268439198">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439368" name="onKey" parent="HistoryDelegate" startPc="268439222">
+            <param id="keyEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439421" name="onBack" parent="MatchDelegate" startPc="268439369">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439490" name="onMenu" parent="MatchDelegate" startPc="268439422">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439615" name="onKeyReleased" parent="MatchDelegate" startPc="268439491">
+            <param id="keyEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439648" name="initialize" parent="MatchDelegate" startPc="268439616">
+            <param id="match"/>
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439810" name="onKey" parent="MatchDelegate" startPc="268439649">
+            <param id="keyEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439849" name="onKeyPressed" parent="MatchDelegate" startPc="268439811">
+            <param id="keyEvent"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439979" name="formatDate" parent="HistoryView" startPc="268439850">
+            <param id="ts"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440050" name="initialize" parent="HistoryView" startPc="268439980">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440533" name="onUpdate" parent="HistoryView" startPc="268440051">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
