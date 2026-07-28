@@ -1,7 +1,3 @@
-using Toybox.Application as App;
-using Toybox.Lang as Lang;
-using Toybox.Time as Time;
-
 // Holds all state for one scoring session.
 // Every point and manual set-end is pushed onto an event stack,
 // so undo() can fully reverse any action, including reopening a
@@ -113,25 +109,5 @@ class Match {
             }
         }
         return count;
-    }
-
-    // Persist the finished session to watch storage (newest first, max 20).
-    function saveToHistory() {
-        var stored = App.Storage.getValue("history");
-        var history = [];
-        if (stored instanceof Lang.Array) {
-            history = stored as Lang.Array;
-        }
-        var entry = {
-            "ts" => Time.now().value(),
-            "scores" => sets,
-            "target" => target
-        };
-        var capped = [entry];
-        var max = history.size() < 19 ? history.size() : 19;
-        for (var i = 0; i < max; i++) {
-            capped = capped.add(history[i]);
-        }
-        App.Storage.setValue("history", capped);
     }
 }

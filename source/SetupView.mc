@@ -2,18 +2,25 @@ using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
 using Toybox.Lang as Lang;
+using Toybox.Timer as Timer;
 
 // Row indices for the setup screen.
 const ROW_SETS = 0;
 const ROW_TARGET = 1;
 const ROW_WINBY2 = 2;
 const ROW_START = 3;
-const ROW_HISTORY = 4;
-const NUM_ROWS = 5;
+const NUM_ROWS = 4;
+
+// A label wider than this fraction of the screen auto-scrolls instead of
+// being drawn (and potentially clipped/overlapping) in place.
+const LABEL_SCROLL_WIDTH_RATIO = 0.4;
+const LABEL_SCROLL_INTERVAL_MS = 100;
+const LABEL_SCROLL_STEP = 2;
+const LABEL_SCROLL_GAP_RATIO = 0.15;
 
 // Pre-match configuration screen.
 // UP/DOWN move between rows; ENTER edits a value (UP/DOWN adjust,
-// ENTER confirms), toggles Win by 2, starts the match, or opens history.
+// ENTER confirms), toggles Win by 2, or starts the match.
 // BACK exits edit mode, or exits the app.
 class SetupView extends Ui.View {
 
@@ -23,6 +30,10 @@ class SetupView extends Ui.View {
     var numSets = 3;
     var target = 25;
     var winBy2 = true;
+
+    var scrollOffset = 0;
+    var anyLabelScrolling = false;
+    var scrollTimer;
 
     function initialize() {
         View.initialize();
@@ -49,6 +60,65 @@ class SetupView extends Ui.View {
         });
     }
 
+    function onShow() {
+        scrollTimer = new Timer.Timer();
+        scrollTimer.start(method(:onScrollTick), LABEL_SCROLL_INTERVAL_MS, true);
+    }
+
+    function onHide() {
+        if (scrollTimer != null) {
+            scrollTimer.stop();
+            scrollTimer = null;
+        }
+    }
+
+    function onScrollTick() as Void {
+        scrollOffset = (scrollOffset + LABEL_SCROLL_STEP) % 100000;
+        if (anyLabelScrolling) {
+            Ui.requestUpdate();
+        }
+    }
+
+    // Draws `text` at `anchorX`, always confined to LABEL_SCROLL_WIDTH_RATIO
+    // of the screen width. Text that fits is drawn normally; text that
+    // doesn't is cut off at that boundary, unless it's the selected row,
+    // in which case it auto-scrolls horizontally instead of being cut off.
+    // Returns true if it's scrolling (so the caller knows to keep the
+    // scroll timer animating).
+    function drawLabel(dc, text, anchorX, justify, y, rowH, w, selected) {
+        var font = Gfx.FONT_SMALL;
+        var textW = dc.getTextWidthInPixels(text, font);
+        var maxW = (w * LABEL_SCROLL_WIDTH_RATIO).toNumber();
+
+        if (textW <= maxW) {
+            dc.drawText(anchorX, y + rowH / 2, font, text,
+                        justify | Gfx.TEXT_JUSTIFY_VCENTER);
+            return false;
+        }
+
+        var clipLeft = (justify == Gfx.TEXT_JUSTIFY_CENTER) ? anchorX - maxW / 2 : anchorX;
+        dc.setClip(clipLeft, y, maxW, rowH);
+
+        if (!selected) {
+            dc.drawText(anchorX, y + rowH / 2, font, text,
+                        justify | Gfx.TEXT_JUSTIFY_VCENTER);
+            dc.clearClip();
+            return false;
+        }
+
+        var gap = (w * LABEL_SCROLL_GAP_RATIO).toNumber();
+        var total = textW + gap;
+        var x = clipLeft - (scrollOffset % total);
+
+        dc.drawText(x, y + rowH / 2, font, text,
+                    Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x + total, y + rowH / 2, font, text,
+                    Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER);
+
+        dc.clearClip();
+        return true;
+    }
+
     function onUpdate(dc) {
         var w = dc.getWidth();
         var h = dc.getHeight();
@@ -57,20 +127,20 @@ class SetupView extends Ui.View {
         dc.clear();
 
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, h * 0.14, Gfx.FONT_SMALL, "Volleyball",
+        dc.drawText(w / 2, h * 0.14, Gfx.FONT_SMALL, "SetPoint",
                     Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
 
-        var labels = ["Sets", "Target", "Win by 2", "START", "History"];
+        var labels = ["Sets", "Points per Set", "Win by 2", "START"];
         var values = [
             numSets.toString(),
             target.toString(),
             winBy2 ? "Yes" : "No",
-            "",
             ""
         ];
 
         var rowH = h * 0.13;
         var startY = h * 0.26;
+        var scrolling = false;
 
         for (var i = 0; i < NUM_ROWS; i++) {
             var y = startY + i * rowH;
@@ -83,16 +153,22 @@ class SetupView extends Ui.View {
 
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
             if (values[i].equals("")) {
-                dc.drawText(w / 2, y + rowH / 2, Gfx.FONT_SMALL, labels[i],
-                            Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+                if (drawLabel(dc, labels[i], w / 2, Gfx.TEXT_JUSTIFY_CENTER,
+                              y, rowH, w, i == sel)) {
+                    scrolling = true;
+                }
             } else {
-                dc.drawText(w * 0.17, y + rowH / 2, Gfx.FONT_SMALL, labels[i],
-                            Gfx.TEXT_JUSTIFY_LEFT | Gfx.TEXT_JUSTIFY_VCENTER);
+                if (drawLabel(dc, labels[i], w * 0.17, Gfx.TEXT_JUSTIFY_LEFT,
+                              y, rowH, w, i == sel)) {
+                    scrolling = true;
+                }
                 var v = (editing && i == sel) ? "< " + values[i] + " >" : values[i];
                 dc.drawText(w * 0.83, y + rowH / 2, Gfx.FONT_SMALL, v,
                             Gfx.TEXT_JUSTIFY_RIGHT | Gfx.TEXT_JUSTIFY_VCENTER);
             }
         }
+
+        anyLabelScrolling = scrolling;
     }
 }
 
@@ -157,9 +233,6 @@ class SetupDelegate extends Ui.BehaviorDelegate {
             var match = new Match(view.numSets, view.target, view.winBy2);
             var mv = new MatchView(match);
             Ui.pushView(mv, new MatchDelegate(match, mv), Ui.SLIDE_LEFT);
-        } else if (sel == ROW_HISTORY) {
-            var hv = new HistoryView();
-            Ui.pushView(hv, new HistoryDelegate(hv), Ui.SLIDE_LEFT);
         }
         Ui.requestUpdate();
         return true;
