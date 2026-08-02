@@ -57,9 +57,19 @@ class Match {
     var positions;               // [homePos, awayPos], each 1..6
     var firstSideOutDone = false;
 
-    // stack of {"t"=>"p","team"=>0/1,"auto"=>bool,"elapsedMs"=>n,"prev"=>{...}}
-    // or {"t"=>"e","prev"=>{...}}. "prev" snapshots the serve/rotation state
-    // as it was *before* the event, so undo() can restore it verbatim.
+    // A finished set is not banked immediately: the scoreboard stays on it so
+    // the final score can be reviewed, and the set clock freezes at
+    // setEndedAt. Proceeding opens the next set; undoing reopens this one and
+    // resumes the clock where it stopped.
+    var setAwaitingReview = false;
+    var setEndedAt = null;
+
+    // stack of:
+    //   {"t"=>"p","team"=>0/1,"auto"=>bool,"elapsedMs"=>n,"prev"=>{...}}
+    //   {"t"=>"e","prev"=>{...}}   manual set end
+    //   {"t"=>"a","prev"=>{...}}   advanced into the next set
+    // "prev" snapshots the volatile state as it was *before* the event, so
+    // undo() can restore it verbatim instead of reverse-computing it.
     var events;
 
     function initialize(n, t, w) {
@@ -84,8 +94,18 @@ class Match {
             "serveTeam" => serveTeam,
             "pos0" => positions[0],
             "pos1" => positions[1],
-            "firstSideOutDone" => firstSideOutDone
+            "firstSideOutDone" => firstSideOutDone,
+            "awaitingReview" => setAwaitingReview,
+            "endedAt" => setEndedAt
         };
+    }
+
+    // Elapsed time in the current set, frozen while the set is being
+    // reviewed so the review pause is not counted against it.
+    function elapsedMs() {
+        var end = (setAwaitingReview && setEndedAt != null)
+            ? setEndedAt : Sys.getTimer();
+        return end - setStartTimes[cur];
     }
 
     // Scores a point for team (0 = Home, 1 = Away).
@@ -99,7 +119,7 @@ class Match {
     // they were the original servers, so the user decides. The model never
     // pushes UI itself.
     function addPoint(team) {
-        if (!started || done) {
+        if (!started || done || setAwaitingReview) {
             return false;
         }
 
@@ -129,15 +149,33 @@ class Match {
             "t" => "p",
             "team" => team,
             "auto" => auto,
-            "elapsedMs" => Sys.getTimer() - setStartTimes[cur],
+            "elapsedMs" => elapsedMs(),
             "prev" => snapshot
         });
 
         if (auto) {
-            advance();
+            enterSetReview();
             return false; // set is over; rotation no longer matters
         }
         return needsPrompt;
+    }
+
+    // The set is over, but stay on it so the score can be reviewed.
+    function enterSetReview() {
+        setAwaitingReview = true;
+        setEndedAt = Sys.getTimer();
+    }
+
+    // START from the review screen: bank the set and open the next one (or
+    // finish the match). Recorded as its own event so undo can come back.
+    function proceedToNextSet() {
+        if (!setAwaitingReview) {
+            return;
+        }
+        events = events.add({"t" => "a", "prev" => serveSnapshot()});
+        setAwaitingReview = false;
+        setEndedAt = null;
+        advance();
     }
 
     // Applies the answer to "Stay 1 on serve?" -- No moves the team that just
@@ -160,13 +198,14 @@ class Match {
         return hi >= target;
     }
 
-    // Manual set end (Pause screen "End Set"). Any score is allowed.
+    // Manual set end (Pause screen "End Set"). Any score is allowed. Lands on
+    // the same review screen as a set that finished on its own.
     function endSetManual() {
-        if (!started || done) {
+        if (!started || done || setAwaitingReview) {
             return;
         }
         events = events.add({"t" => "e", "prev" => serveSnapshot()});
-        advance();
+        enterSetReview();
     }
 
     function advance() {
@@ -194,8 +233,11 @@ class Match {
         var e = events[events.size() - 1];
         events = popLast(events);
 
-        var reopens = e["t"].equals("e") || e["auto"] == true;
-        if (reopens) {
+        var wasAwaiting = setAwaitingReview;
+        var pausedSince = setEndedAt;
+
+        if (e["t"].equals("a")) {
+            // Step back out of the set this advance opened.
             if (done) {
                 done = false;
             } else {
@@ -203,19 +245,28 @@ class Match {
                 setStartTimes = popLast(setStartTimes);
                 cur = cur - 1;
             }
-        }
-        if (e["t"].equals("p")) {
+        } else if (e["t"].equals("p")) {
             var s = sets[cur];
             s[e["team"]] = s[e["team"]] - 1;
         }
+        // "e" (manual set end) changes no score; its snapshot restores the
+        // review state on its own.
 
-        // Restore serve/rotation exactly as it stood before this event,
+        // Restore the volatile state exactly as it stood before this event,
         // rather than trying to reverse-compute a rotation.
         var prev = e["prev"];
         if (prev != null) {
             serveTeam = prev["serveTeam"];
             positions = [prev["pos0"], prev["pos1"]];
             firstSideOutDone = prev["firstSideOutDone"];
+            setAwaitingReview = prev["awaitingReview"];
+            setEndedAt = prev["endedAt"];
+        }
+
+        // Undoing back out of the review screen resumes the set clock where
+        // it froze, so time spent reviewing is not charged to the set.
+        if (wasAwaiting && !setAwaitingReview && pausedSince != null) {
+            setStartTimes[cur] = setStartTimes[cur] + (Sys.getTimer() - pausedSince);
         }
         return true;
     }
@@ -237,11 +288,12 @@ class Match {
         return "Position " + positions[team];
     }
 
-    // Number of completed sets won by team (0 or 1).
+    // Number of completed sets won by team (0 or 1). A set being reviewed is
+    // finished, so it counts even though it has not been banked yet.
     function setsWon(team) {
         var other = 1 - team;
         var count = 0;
-        var completed = done ? sets.size() : cur;
+        var completed = done ? sets.size() : (setAwaitingReview ? cur + 1 : cur);
         for (var i = 0; i < completed; i++) {
             if (sets[i][team] > sets[i][other]) {
                 count = count + 1;
@@ -250,20 +302,20 @@ class Match {
         return count;
     }
 
-    // Point events (chronological order) belonging to the currently
-    // active/in-progress set, i.e. everything after the event that ended
-    // the previous set, if any.
+    // Point events (chronological order) belonging to the set currently on
+    // screen. Advancing ("a") is what opens a new set, so it is the only
+    // boundary -- a set being reviewed still shows the points that won it.
     function currentSetEvents() {
         var reversed = [];
         var i = events.size() - 1;
         while (i >= 0) {
             var e = events[i];
-            var isBoundary = e["t"].equals("e")
-                || (e["t"].equals("p") && e["auto"] == true);
-            if (isBoundary) {
+            if (e["t"].equals("a")) {
                 break;
             }
-            reversed = reversed.add(e);
+            if (e["t"].equals("p")) {
+                reversed = reversed.add(e);
+            }
             i = i - 1;
         }
         var n = reversed.size();

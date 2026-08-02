@@ -53,6 +53,49 @@ function drawVolleyballIcon(dc, cx, cy, r) {
     dc.drawLine(cx, cy - r, cx, cy + r);
 }
 
+// Between-sets review: the set is over but the scoreboard stays on it so the
+// final score can be checked before committing to the next set. Shown by both
+// scoreboard pages while match.setAwaitingReview is true.
+function drawSetComplete(dc, w, h, match) {
+    var s = match.sets[match.cur];
+    var lastSet = (match.cur + 1 >= match.numSets);
+
+    dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w / 2, h * 0.13, Gfx.FONT_SMALL,
+                "SET " + (match.cur + 1) + "\nCOMPLETE",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+
+    dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
+    dc.setPenWidth(1);
+    dc.drawLine(w / 2, h * 0.24, w / 2, h * 0.55);
+
+    dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w * 0.28, h * 0.29, Gfx.FONT_XTINY, "Home",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+    dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w * 0.72, h * 0.29, Gfx.FONT_XTINY, "Away",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+
+    dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w * 0.28, h * 0.44, Gfx.FONT_NUMBER_MEDIUM, s[0].toString(),
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+    dc.drawText(w * 0.72, h * 0.44, Gfx.FONT_NUMBER_MEDIUM, s[1].toString(),
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+
+    dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w / 2, h * 0.62, Gfx.FONT_XTINY,
+                "Sets " + match.setsWon(0) + " - " + match.setsWon(1),
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+    dc.drawText(w / 2, h * 0.71, Gfx.FONT_XTINY, formatElapsed(match.elapsedMs()),
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+
+    dc.drawText(w / 2, h * 0.82, Gfx.FONT_XTINY,
+                lastSet ? "START: finish" : "START: next set",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+    dc.drawText(w / 2, h * 0.90, Gfx.FONT_XTINY, "BACK: undo",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+}
+
 // Three stacked dots (a vertical ellipsis), drawn beside the physical
 // MENU/UP button as a hint that the button opens a menu -- the same
 // affordance Garmin's own activity apps use.

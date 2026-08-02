@@ -48,6 +48,11 @@ class ScoreboardSecondaryView extends Ui.View {
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
+        if (match.setAwaitingReview) {
+            drawSetComplete(dc, w, h, match);
+            return;
+        }
+
         // Centre divider spanning the combined top + middle block.
         dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
         dc.setPenWidth(1);

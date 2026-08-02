@@ -64,20 +64,23 @@ class PointsHistoryView extends Ui.View {
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
+        // Top section: the title alone, on two lines. Anchored at the centre
+        // of the two-line block so neither line runs off the top bezel.
         dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, h * 0.08, Gfx.FONT_TINY, "POINTS HISTORY",
+        dc.drawText(w / 2, h * 0.15, Gfx.FONT_TINY, "POINTS\nHISTORY",
                     Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
 
-        // Column layout: #, elapsed time, score, separated by vertical lines.
+        // Everything below the title is the table: #, elapsed time, score,
+        // separated by vertical dividers.
         var col1X = w * 0.30;
         var col2X = w * 0.65;
         var xNum = w * 0.15;
         var xTime = (col1X + col2X) / 2;
         var xScore = (col2X + w) / 2;
 
-        var headerY = h * 0.17;
-        var listTop = h * 0.24;
-        var listBottom = h * 0.90;
+        var headerY = h * 0.31;
+        var listTop = h * 0.37;
+        var listBottom = h * 0.88;
 
         dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
         dc.drawText(xNum, headerY, Gfx.FONT_XTINY, "#",
@@ -89,8 +92,8 @@ class PointsHistoryView extends Ui.View {
 
         dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
-        dc.drawLine(col1X, headerY - h * 0.03, col1X, listBottom);
-        dc.drawLine(col2X, headerY - h * 0.03, col2X, listBottom);
+        dc.drawLine(col1X, h * 0.26, col1X, listBottom);
+        dc.drawLine(col2X, h * 0.26, col2X, listBottom);
 
         if (entries.size() == 0) {
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
@@ -99,7 +102,7 @@ class PointsHistoryView extends Ui.View {
             return;
         }
 
-        var rowH = h * 0.13;
+        var rowH = h * 0.125;
         visibleRows = ((listBottom - listTop) / rowH).toNumber();
         if (visibleRows < 1) {
             visibleRows = 1;
@@ -124,13 +127,12 @@ class PointsHistoryView extends Ui.View {
             y = y + rowH;
         }
 
-        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-        if (topIndex > 0) {
-            dc.drawText(w - w * 0.08, listTop - h * 0.02, Gfx.FONT_XTINY, "^",
-                        Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
-        }
-        if (last < entries.size()) {
-            dc.drawText(w - w * 0.08, listBottom + h * 0.02, Gfx.FONT_XTINY, "v",
+        // Scroll position, centred so it stays clear of the rounded corners
+        // that the old right-edge arrows were pushed into.
+        if (entries.size() > visibleRows) {
+            dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+            dc.drawText(w / 2, h * 0.93, Gfx.FONT_XTINY,
+                        last + "/" + entries.size(),
                         Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
         }
     }

@@ -50,6 +50,8 @@ class ScoreboardPrimaryView extends Ui.View {
 
         if (match.done) {
             drawSummary(dc, w, h);
+        } else if (match.setAwaitingReview) {
+            drawSetComplete(dc, w, h, match);
         } else {
             drawScoreboard(dc, w, h);
         }
@@ -63,9 +65,7 @@ class ScoreboardPrimaryView extends Ui.View {
         dc.drawText(w / 2, h * 0.10, Gfx.FONT_SMALL, formatClockTime(),
                     Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
         dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-        var sub = match.started
-            ? formatElapsed(Sys.getTimer() - match.setStartTimes[match.cur])
-            : "press START";
+        var sub = match.started ? formatElapsed(match.elapsedMs()) : "press START";
         dc.drawText(w / 2, h * 0.19, Gfx.FONT_XTINY, sub,
                     Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
 
@@ -200,7 +200,7 @@ class ScoreboardDelegate extends Ui.BehaviorDelegate {
     }
 
     function scorePoint(team) {
-        if (!match.started || match.done) {
+        if (!match.started || match.done || match.setAwaitingReview) {
             return;
         }
         if (match.addPoint(team)) {
@@ -214,6 +214,12 @@ class ScoreboardDelegate extends Ui.BehaviorDelegate {
     function onStartStop() {
         if (match.done) {
             Ui.popView(Ui.SLIDE_RIGHT);
+            return;
+        }
+        if (match.setAwaitingReview) {
+            // Bank the reviewed set and open the next one (or finish).
+            match.proceedToNextSet();
+            Ui.requestUpdate();
             return;
         }
         if (!match.started) {
@@ -264,10 +270,15 @@ class ScoreboardDelegate extends Ui.BehaviorDelegate {
         }
         backHoldFired = true;
         markBackHandled();
-        if (match.started && !match.done) {
-            match.undo();
-            Ui.requestUpdate();
+        undoPoint();
+    }
+
+    function undoPoint() {
+        if (!match.started) {
+            return;
         }
+        match.undo();
+        Ui.requestUpdate();
     }
 
     function onKeyReleased(keyEvent) {
@@ -305,7 +316,14 @@ class ScoreboardDelegate extends Ui.BehaviorDelegate {
             return; // the other callback already scored this press
         }
         markBackHandled();
-        scorePoint(1);
+
+        // On the review and summary screens there is no Away point to score,
+        // so a quick BACK undoes instead -- the way back into the set.
+        if (match.setAwaitingReview || match.done) {
+            undoPoint();
+        } else {
+            scorePoint(1);
+        }
     }
 
     function cancelBackHold() {
