@@ -13,7 +13,7 @@ class VolleyballScoreApp extends App.AppBase {
     }
 
     function getInitialView() {
-        var view = new SetupView();
-        return [ view, new SetupDelegate(view) ];
+        var view = new LandingView();
+        return [ view, new LandingDelegate() ];
     }
 }

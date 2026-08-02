@@ -33,8 +33,8 @@ _Users_velarded_Repositories_garmin_scoreboard_app_source_VolleyballScoreApp_mc_
         [ "_Users_velarded_Repositories_garmin_scoreboard_app_source_VolleyballScoreApp_mc_15_30_18_4_start" "_Users_velarded_Repositories_garmin_scoreboard_app_source_VolleyballScoreApp_mc_15_30_18_4_stop" ]
         %view.1 = local;
         symbol [ view %view.1 16 12 16 ];
-        symbol [ SetupView %tmp.4 16 23 32 ];
-        %tmp.4 = getv ? :SetupView;
+        symbol [ LandingView %tmp.4 16 23 34 ];
+        %tmp.4 = getv ? :LandingView;
         %tmp.1 = newc %tmp.4 ();
         lputv %view.1 %tmp.1;
         symbol [ view %view.1 16 12 16 ];
@@ -44,14 +44,12 @@ _Users_velarded_Repositories_garmin_scoreboard_app_source_VolleyballScoreApp_mc_
         symbol [ view %tmp.6 17 17 21 ];
         %tmp.7 = dup %tmp.5;
         %tmp.8 = aputv %tmp.7 0 %tmp.6;
-        symbol [ SetupDelegate %tmp.12 17 27 40 ];
-        %tmp.12 = getv ? :SetupDelegate;
-        %tmp.13 = lgetv %view.1;
-        symbol [ view %tmp.13 17 41 45 ];
-        %tmp.9 = newc %tmp.12 (%tmp.13);
-        %tmp.14 = dup %tmp.8;
-        %tmp.15 = aputv %tmp.14 1 %tmp.9;
-        ret %tmp.15;
+        symbol [ LandingDelegate %tmp.12 17 27 42 ];
+        %tmp.12 = getv ? :LandingDelegate;
+        %tmp.9 = newc %tmp.12 ();
+        %tmp.13 = dup %tmp.8;
+        %tmp.14 = aputv %tmp.13 1 %tmp.9;
+        ret %tmp.14;
 _Users_velarded_Repositories_garmin_scoreboard_app_source_VolleyballScoreApp_mc_15_30_18_4_stop:
     }
 }

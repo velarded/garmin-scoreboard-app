@@ -1,27 +1,26 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Application as App;
-using Toybox.Lang as Lang;
 using Toybox.Timer as Timer;
 
 // Row indices for the setup screen.
 const ROW_SETS = 0;
 const ROW_TARGET = 1;
 const ROW_WINBY2 = 2;
-const ROW_START = 3;
-const NUM_ROWS = 4;
+const NUM_ROWS = 3;
 
 // A label wider than this fraction of the screen auto-scrolls instead of
 // being drawn (and potentially clipped/overlapping) in place.
 const LABEL_SCROLL_WIDTH_RATIO = 0.4;
-const LABEL_SCROLL_INTERVAL_MS = 100;
+const LABEL_SCROLL_INTERVAL_MS = 50;
 const LABEL_SCROLL_STEP = 2;
 const LABEL_SCROLL_GAP_RATIO = 0.15;
 
-// Pre-match configuration screen.
+// Pre-match configuration screen, opened with MENU from LandingView.
 // UP/DOWN move between rows; ENTER edits a value (UP/DOWN adjust,
-// ENTER confirms), toggles Win by 2, or starts the match.
-// BACK exits edit mode, or exits the app.
+// ENTER confirms) or toggles Win by 2.
+// BACK exits edit mode, then returns to LandingView.
+// Starting a session lives on LandingView, not here.
 class SetupView extends Ui.View {
 
     var sel = 0;
@@ -37,19 +36,10 @@ class SetupView extends Ui.View {
 
     function initialize() {
         View.initialize();
-        var stored = App.Storage.getValue("settings");
-        if (stored instanceof Lang.Dictionary) {
-            var d = stored as Lang.Dictionary;
-            if (d.get("sets") != null) {
-                numSets = d.get("sets");
-            }
-            if (d.get("target") != null) {
-                target = d.get("target");
-            }
-            if (d.get("winby2") != null) {
-                winBy2 = d.get("winby2");
-            }
-        }
+        var s = loadMatchSettings();
+        numSets = s["sets"];
+        target = s["target"];
+        winBy2 = s["winby2"];
     }
 
     function saveSettings() {
@@ -130,12 +120,11 @@ class SetupView extends Ui.View {
         dc.drawText(w / 2, h * 0.14, Gfx.FONT_SMALL, "SetPoint",
                     Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
 
-        var labels = ["Sets", "Points per Set", "Win by 2", "START"];
+        var labels = ["Sets", "Points per Set", "Win by 2"];
         var values = [
             numSets.toString(),
             target.toString(),
-            winBy2 ? "Yes" : "No",
-            ""
+            winBy2 ? "Yes" : "No"
         ];
 
         var rowH = h * 0.13;
@@ -228,11 +217,6 @@ class SetupDelegate extends Ui.BehaviorDelegate {
         } else if (sel == ROW_WINBY2) {
             view.winBy2 = !view.winBy2;
             view.saveSettings();
-        } else if (sel == ROW_START) {
-            view.saveSettings();
-            var match = new Match(view.numSets, view.target, view.winBy2);
-            var mv = new MatchView(match);
-            Ui.pushView(mv, new MatchDelegate(match, mv), Ui.SLIDE_LEFT);
         }
         Ui.requestUpdate();
         return true;
@@ -245,6 +229,6 @@ class SetupDelegate extends Ui.BehaviorDelegate {
             Ui.requestUpdate();
             return true;
         }
-        return false; // exit app
+        return false; // pops back to LandingView
     }
 }

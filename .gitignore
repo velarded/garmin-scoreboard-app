@@ -1,0 +1,23 @@
+# ---- Connect IQ build output ----
+bin/
+gen/
+dist/
+export/
+
+# Compiled/packaged artifacts (regeneratable via Build/Export)
+*.prg
+*.prg.debug.xml
+*.iq
+
+# Monkey C compiler debug/intermediate files
+*.mir
+*.debug.xml
+
+# ---- Developer key: NEVER commit ----
+# (whoever holds this key can publish updates as "you")
+*.der
+*.pem
+*.key
+developer_key*
+
+# ---- IDE / editor
