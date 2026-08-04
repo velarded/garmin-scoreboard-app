@@ -81,6 +81,10 @@ class PauseDelegate extends Ui.BehaviorDelegate {
 
     function onSelect() {
         if (view.sel == PAUSE_ROW_RESUME) {
+
+        if (Attention has :playTone) {
+            Attention.playTone(Attention.TONE_START);
+        }
             Ui.popView(Ui.SLIDE_DOWN);
         } else if (view.sel == PAUSE_ROW_END_SET) {
             match.endSetManual();
@@ -92,8 +96,11 @@ class PauseDelegate extends Ui.BehaviorDelegate {
             var shv = new SetsHistoryView(match);
             Ui.pushView(shv, new SetsHistoryDelegate(shv), Ui.SLIDE_LEFT);
         } else if (view.sel == PAUSE_ROW_QUIT) {
-            var dialog = new Ui.Confirmation("Quit session?");
-            Ui.pushView(dialog, new QuitConfirmDelegate(), Ui.SLIDE_UP);
+            // Save/Discard is the confirmation -- it ends the session and
+            // returns to Landing, popping itself, this Pause screen and the
+            // scoreboard beneath it.
+            var asv = new ActivitySaveView();
+            Ui.pushView(asv, new ActivitySaveDelegate(match, asv, 3), Ui.SLIDE_UP);
         }
         return true;
     }

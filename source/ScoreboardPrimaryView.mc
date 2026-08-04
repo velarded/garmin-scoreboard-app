@@ -213,7 +213,15 @@ class ScoreboardDelegate extends Ui.BehaviorDelegate {
 
     function onStartStop() {
         if (match.done) {
-            Ui.popView(Ui.SLIDE_RIGHT);
+            // A finished match still holds an open FIT recording, so resolve
+            // it rather than dropping straight back to Landing and leaving
+            // the watch recording indefinitely.
+            if (match.isRecordingActivity()) {
+                var asv = new ActivitySaveView();
+                Ui.pushView(asv, new ActivitySaveDelegate(match, asv, 2), Ui.SLIDE_UP);
+            } else {
+                Ui.popView(Ui.SLIDE_RIGHT);
+            }
             return;
         }
         if (match.setAwaitingReview) {
@@ -359,21 +367,3 @@ class ScoreboardPrimaryDelegate extends ScoreboardDelegate {
     }
 }
 
-class QuitConfirmDelegate extends Ui.ConfirmationDelegate {
-
-    function initialize() {
-        ConfirmationDelegate.initialize();
-    }
-
-    function onResponse(response) {
-        if (response == Ui.CONFIRM_YES) {
-            // Pop the two views under the (auto-dismissed) dialog: PauseView,
-            // then the scoreboard -- landing back on LandingView. Primary and
-            // Secondary replace each other via switchToView, so the scoreboard
-            // is always exactly one view deep here.
-            Ui.popView(Ui.SLIDE_RIGHT);
-            Ui.popView(Ui.SLIDE_RIGHT);
-        }
-        return true;
-    }
-}

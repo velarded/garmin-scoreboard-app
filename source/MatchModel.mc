@@ -1,9 +1,63 @@
 using Toybox.System as Sys;
 using Toybox.Application as App;
 using Toybox.Lang as Lang;
+using Toybox.Activity as Activity;
+using Toybox.ActivityRecording as Record;
 
 // Players cycle through six rotation positions, 1..6.
 const ROTATION_POSITIONS = 6;
+
+// The system allows only ONE recording session to exist at a time, and one
+// left unclosed outlives the app -- the watch keeps believing an activity is
+// in progress, which blocks Garmin Connect from syncing. It is therefore
+// tracked module-wide rather than per-Match, so the app can guarantee it is
+// closed on exit no matter which screen the user left from.
+var activeSession = null;
+
+function startActivitySession() {
+    if (!(Toybox has :ActivityRecording) || activeSession != null) {
+        return;
+    }
+    // createSession hands back an already-open session instead of making a
+    // new one, so never blindly start(): it may already be running.
+    activeSession = Record.createSession({
+        :name => "Volleyball",
+        :sport => volleyballSport()
+    });
+    if (!activeSession.isRecording()) {
+        activeSession.start();
+    }
+}
+
+// keep=true writes the FIT file, keep=false throws it away. Safe to call when
+// nothing is recording, so exit paths can call it unconditionally.
+function closeActivitySession(keep) {
+    if (activeSession == null) {
+        return;
+    }
+    if (activeSession.isRecording()) {
+        activeSession.stop();
+    }
+    if (keep) {
+        activeSession.save();
+    } else {
+        activeSession.discard();
+    }
+    activeSession = null;
+}
+
+// SPORT_VOLLEYBALL lives in Activity (API 4.1.6+), NOT in ActivityRecording --
+// referencing ActivityRecording.SPORT_VOLLEYBALL is a symbol-not-found crash
+// on device. Fall back through the older constants for devices below that.
+function volleyballSport() {
+    if (Activity has :SPORT_VOLLEYBALL) {
+        return Activity.SPORT_VOLLEYBALL;
+    }
+    if (Activity has :SPORT_GENERIC) {
+        return Activity.SPORT_GENERIC;
+    }
+    return Record.SPORT_GENERIC;
+}
 
 // Reads the persisted setup configuration, falling back to defaults.
 // Shared by SetupView (to edit) and LandingView (to start a session).
@@ -83,10 +137,30 @@ class Match {
     }
 
     // Begins recording. Restarts the set clock so elapsed time counts from
-    // the real start rather than from when this object was constructed.
+    // the real start rather than from when this object was constructed, and
+    // opens the Garmin FIT activity that Save/Discard later resolves.
     function start() {
         started = true;
         setStartTimes[cur] = Sys.getTimer();
+        startSession();
+    }
+
+    function startSession() {
+        startActivitySession();
+    }
+
+    // Writes the FIT file, so the session shows up as a volleyball activity.
+    function saveActivity() {
+        closeActivitySession(true);
+    }
+
+    // Throws the recording away; nothing reaches Garmin Connect.
+    function discardActivity() {
+        closeActivitySession(false);
+    }
+
+    function isRecordingActivity() {
+        return activeSession != null;
     }
 
     function serveSnapshot() {
