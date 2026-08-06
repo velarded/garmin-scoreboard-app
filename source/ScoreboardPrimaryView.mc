@@ -49,7 +49,7 @@ class ScoreboardPrimaryView extends Ui.View {
         dc.clear();
 
         if (match.done) {
-            drawSummary(dc, w, h);
+            drawMatchSummary(dc, w, h, match);
         } else if (match.setAwaitingReview) {
             drawSetComplete(dc, w, h, match);
         } else {
@@ -114,38 +114,6 @@ class ScoreboardPrimaryView extends Ui.View {
         return "--";
     }
 
-    function drawSummary(dc, w, h) {
-        var homeWon = match.setsWon(0);
-        var awayWon = match.setsWon(1);
-
-        dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, h * 0.13, Gfx.FONT_SMALL, "MATCH DONE",
-                    Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
-
-        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        var result;
-        if (homeWon > awayWon) {
-            result = "Home wins " + homeWon + "-" + awayWon;
-        } else if (awayWon > homeWon) {
-            result = "Away wins " + awayWon + "-" + homeWon;
-        } else {
-            result = "Tied " + homeWon + "-" + awayWon;
-        }
-        dc.drawText(w / 2, h * 0.25, Gfx.FONT_MEDIUM, result,
-                    Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
-
-        var y = h * 0.38;
-        for (var i = 0; i < match.sets.size(); i++) {
-            dc.drawText(w / 2, y, Gfx.FONT_TINY,
-                        "Set " + (i + 1) + ":  " + match.sets[i][0] + " - " + match.sets[i][1],
-                        Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
-            y = y + h * 0.09;
-        }
-
-        dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, h * 0.87, Gfx.FONT_XTINY, "START: exit",
-                    Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
-    }
 }
 
 // Button handling shared by both scoreboard pages:

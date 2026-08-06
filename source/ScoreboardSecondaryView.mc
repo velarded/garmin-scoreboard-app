@@ -48,6 +48,10 @@ class ScoreboardSecondaryView extends Ui.View {
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
+        if (match.done) {
+            drawMatchSummary(dc, w, h, match);
+            return;
+        }
         if (match.setAwaitingReview) {
             drawSetComplete(dc, w, h, match);
             return;

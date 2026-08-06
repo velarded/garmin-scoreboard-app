@@ -96,6 +96,42 @@ function drawSetComplete(dc, w, h, match) {
                 Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
 }
 
+// End-of-match summary: the result and every set score. Shown by both
+// scoreboard pages once match.done is set, so finishing on either one lands
+// on the same screen.
+function drawMatchSummary(dc, w, h, match) {
+    var homeWon = match.setsWon(0);
+    var awayWon = match.setsWon(1);
+
+    dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w / 2, h * 0.13, Gfx.FONT_SMALL, "MATCH DONE",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+
+    dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+    var result;
+    if (homeWon > awayWon) {
+        result = "Home wins " + homeWon + "-" + awayWon;
+    } else if (awayWon > homeWon) {
+        result = "Away wins " + awayWon + "-" + homeWon;
+    } else {
+        result = "Tied " + homeWon + "-" + awayWon;
+    }
+    dc.drawText(w / 2, h * 0.25, Gfx.FONT_MEDIUM, result,
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+
+    var y = h * 0.38;
+    for (var i = 0; i < match.sets.size(); i++) {
+        dc.drawText(w / 2, y, Gfx.FONT_TINY,
+                    "Set " + (i + 1) + ":  " + match.sets[i][0] + " - " + match.sets[i][1],
+                    Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+        y = y + h * 0.09;
+    }
+
+    dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+    dc.drawText(w / 2, h * 0.87, Gfx.FONT_XTINY, "START: exit",
+                Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER);
+}
+
 // Three stacked dots (a vertical ellipsis), drawn beside the physical
 // MENU/UP button as a hint that the button opens a menu -- the same
 // affordance Garmin's own activity apps use.
